@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Roboto&display=swap');
+
+
+#logo{
+  font-family: Staatliches;
+  color: black;
+  position: fixed;
+  font-size: 2vw;
+  top:10px;
+  left:10px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+.header{
+  z-index: -1;
+  height: 100vh;
+  color: white;
+
+  width: 100vw;
+  overflow: hidden;
+
+  #background{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    position:fixed;
+  }
+  .title{
+    background-color: black;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    font-size: 10vw;
+    font-family: Staatliches;
+  }
+  .subtitle{
+    font-size: 1vw;
+    font-family: Roboto;
+    cursor: pointer;
+  }
+}
+
+.container{
+  z-index: 8;
+  height: 200vh;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.scrollImages{
+  z-index: 2;
+  position: relative;
+  height: 100vh;
+  width: 100vw !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    height: 80vh;
+  }
+}
+
+.textScrollContainer{
+  position: relative;
+  z-index: 1;
+  transform: translateY(-85vh);
+
+  backface-visibility: hidden;
+  display: inline-block;
+  .textScroll{
+    font-family: Staatliches;
+    font-size: 5vw;
+    -webkit-text-stroke: 1px black;
+    word-spacing: 1vw;
+    color:white;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: ease-out 500ms;
+  }
+  text-overflow: clip;
+}
+
+.hidden{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.visible{
+  visibility: visible;
+   opacity: 1;
+  transition: ease-in-out 1s;
+ }
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Scroll Horizontal
+
+.header2{
+  height: 130vh;
+  color: white;
+  width: 100vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header2::-webkit-scrollbar {
+  display: none;
+ }
+
+.horizontalScrollContainer::-webkit-scrollbar{
+  display: none;
+}
+.horizontalScrollContainer{
+  display: inline-flex;
+
+  .horizontalScroll{
+    height: 70vh;
+    padding: 0vw 10vw 0 10vw ;
+  }
+
+  .firstScrollImg{
+    padding: 0vw 10vw 0 160vw ;
+  }
+
+  .lastScrollImg{
+    padding: 0vw 40vw 0 10vw ;
+  }
+}
+
+
+
+
+
+
+
+
+.haut{
+  transform: translateY(-20vh);
+}
+
+.black{
+  background-color: black;
+}
+.white{
+  background-color: white;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Trou noir
+.black-hole{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .img-black-hole{
+    position: absolute;
+    opacity: 0.3;
+    z-index: 3;
+  }
+  img{
+    height: 80vh;
+    opacity: 0.9;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// insta
+
+#instaLink{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 18vw;
+
+    div > img {
+      height: 22vw;
+      width: 22vw;
+      object-fit: cover;
+      cursor: pointer;
+      transition: ease-in-out 0.3s;
+    }
+
+    div > img:hover{
+      transform: scale(1.02);
+    }
+  }
+
+  .instaLinksAnimated{
+    padding: 0 16vw;
+    transition: ease-out 1s;
+  }
+
+  .instaImg{
+    cursor: pointer;
+  }
+}
+
+
+
+/////////////////////////////////////////////////////////
+// footer
+
+
+footer{
+  background-color: black;
+  height: 60vh;
+  color:white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .footer-category{
+    .h1{
+      font-size: 1vw;
+    }
+    .content{
+      font-size: 0.8vw;
+    }
+  }
+}
