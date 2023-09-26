@@ -226,6 +226,137 @@ footer{
     }
     .content{
       font-size: 0.8vw;
+      width:25vw;
+      padding: 2vh 0;
+      line-height: 1.4;
+      a{
+        color:inherit;
+        text-underline-offset: 4px;
+      }
+    }
+    .info-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 11vh;
+    }
+  }
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+@media only screen and (max-device-width:768px){
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  img,
+  table,
+  td,
+  blockquote,
+  code,
+  pre,
+  textarea,
+  input,
+  iframe,
+  object,
+  embed,
+  video {
+    max-width: 100%;
+  }
+  /* conserver le ratio des images */
+
+  img {
+    height: auto;
+  }
+
+  .scrollImages{
+    #paul_bleu_3{
+      height: auto;
+      width: 80vw;
+    }
+  }
+
+  .textScrollContainer{
+    .textScroll{
+      font-size: 12vw;
+    }
+  }
+
+  .black-hole{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img-black-hole{
+      position: absolute;
+      opacity: 0.3;
+      z-index: 3;
+    }
+    img{
+      opacity: 0.9;
+      height: auto;
+    }
+    .img-paul{
+      width: 100vw;
+    }
+    .img-black-hole{
+      width: 50vw;
+      height: auto;
+    }
+  }
+
+
+  #instaLink {
+
+    .wrapper {
+      padding:0;
+
+      div > img {
+        height: 33vw;
+        width: 33vw;
+        object-fit: cover;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+      }
+    }
+  }
+
+
+  footer{
+    padding: 10vh 0px;
+    height: 60vh;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .footer-category{
+      width: 80vw;
+
+      .h1{
+        font-size: 5vw;
+      }
+      .content{
+        font-size: 3vw;
+        width: 80vw;
+        br{
+          display: block;
+        }
+        br+br{
+          display: none;
+        }
+      }
     }
   }
 }

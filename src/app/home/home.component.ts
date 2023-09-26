@@ -111,14 +111,14 @@ export class HomeComponent implements OnInit {
   }
 
   private handleImgDisplay() {
-    const paulBleu3 = document.getElementById('paul_bleu_3');
+    //const paulBleu3 = document.getElementById('paul_bleu_3');
     const instaLinks = document.querySelector('#instaLink .wrapper');
 
     window.addEventListener('scroll', (e) =>{
-      if (paulBleu3!.classList.contains('hidden') && this.getPositionVerticale() >= 1200){
+     /* if (paulBleu3!.classList.contains('hidden') && this.getPositionVerticale() >= 1200){
         paulBleu3!.classList.add('visible');
         paulBleu3!.classList.remove('hidden');
-      }
+      }*/
 
       if (!instaLinks!.classList.contains('instaLinksAnimated') && this.getPositionVerticale() >= 7200){
         instaLinks!.classList.add('instaLinksAnimated')
