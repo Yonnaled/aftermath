@@ -10,9 +10,35 @@
   left:10px;
   opacity: 0;
   transition: ease-in-out 0.5s;
+  z-index:9;
 }
 
-.header{
+#background:hover ~ ng-lottie{
+  opacity:1;
+}
+
+ng-lottie{
+  transition: opacity 2s;
+  opacity: 0;
+  display: block;
+  width:1.5vw !important;
+  //position: absolute;
+  position:fixed;
+  margin-left:50vw;
+  margin-top: 40vw;
+  transform: translate(-50%,50%);
+}
+
+.small{
+  z-index: -1;
+  height: 50vh;
+  color: white;
+
+  width: 100vw;
+  overflow: hidden;
+}
+
+.pageSizeWrapper{
   z-index: -1;
   height: 100vh;
   color: white;
@@ -27,6 +53,15 @@
     position:fixed;
   }
   .title{
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transform: translateZ(0);
+    -webkit-transform: translate3d(0,0,1px);
+    -moz-transform: translate3d(0,0,1px);
+    -ms-transform: translate3d(0,0,1px);
+    -o-transform: translate3d(0,0,1px);
+    transform: translate3d(0,0,1px);
+
     background-color: black;
     position:fixed;
     top: 50%;
@@ -100,7 +135,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Scroll Horizontal
 
-.header2{
+.biggerWrapper{
   height: 130vh;
   color: white;
   width: 100vw;
@@ -110,7 +145,7 @@
   justify-content: center;
   align-items: center;
 }
-.header2::-webkit-scrollbar {
+.biggerWrapper::-webkit-scrollbar {
   display: none;
  }
 
@@ -120,20 +155,20 @@
 .horizontalScrollContainer{
   display: inline-flex;
 
-  .horizontalScroll{
+  .horizontalScrollImg{
     height: 70vh;
     padding: 0vw 10vw 0 10vw ;
+    z-index: 30;
   }
 
   .firstScrollImg{
-    padding: 0vw 10vw 0 160vw ;
+    margin-left: 160vw ;
   }
 
   .lastScrollImg{
     padding: 0vw 40vw 0 10vw ;
   }
 }
-
 
 
 
@@ -276,8 +311,20 @@ footer{
   }
   /* conserver le ratio des images */
 
+  #logo{
+    display:none
+  }
+
+  #background:hover ~ ng-lottie{
+    opacity: 0;
+  }
+
   img {
     height: auto;
+  }
+
+  .pageSizeWrapper{
+    height: 90vh;
   }
 
   .scrollImages{
@@ -292,6 +339,27 @@ footer{
       font-size: 12vw;
     }
   }
+
+
+  .biggerWrapper{
+    height:500vw;
+    display:block;
+    overflow: scroll;
+  }
+  .horizontalScrollContainer{
+    display: block;
+    width: 100vw;
+
+    .horizontalScrollImg{
+      margin:0;
+      width:100vw;
+      height: auto;
+      padding: 0vw 10vw 0 10vw ;
+    }
+  }
+
+
+
 
   .black-hole{
     display: flex;
@@ -317,6 +385,7 @@ footer{
 
 
   #instaLink {
+    height: 44vh !important;
 
     .wrapper {
       padding:0;
@@ -334,7 +403,7 @@ footer{
 
   footer{
     padding: 10vh 0px;
-    height: 60vh;
+    height: 80vh;
     color:white;
     display: flex;
     flex-direction: column;
